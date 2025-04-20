@@ -1,36 +1,176 @@
 {
-  "modmail": [
+  "users": [
     {
-      "id": 1,
-      "title": "Demo",
-      "reason": "This is the content of the first post."
+      "pawsmonautId": "user123",
+      "verification": "verified"
     },
     {
-      "id": 2,
-      "title": "Second Post",
-      "content": "This is the content of the second post."
-    },
-    {
-      "id": 3,
-      "title": "Third Post",
-      "content": "This is the content of the third post."
+      "pawsmonautId": "user456",
+      "verification": null
     }
   ],
-  "verifications": [
+  "guildVerifications": [
     {
-      "id": 1,
-      "postId": 1,
-      "body": "This is a comment on the first post."
+      "id": "gv1",
+      "pawsmonautId": "user123",
+      "user_age": 25,
+      "user_whyNew": "Looking to join a new community.",
+      "user_whyTFP": "Heard great things about this server.",
+      "user_joinMethod": "Friend's invite.",
+      "user_isFurry": true,
+      "user_fursona": "Fox",
+      "user_whatFurry": "Someone interested in anthropomorphic animals.",
+      "user_hobbies": "Gaming, drawing",
+      "ticket_webhookURL": null,
+      "ticket_channelId": "channel789",
+      "remindAt": 1678886400000,
+      "createdAt": "2024-04-20T16:41:56.000Z",
+      "handler": "staffMember1",
+      "firstResponseIn": 60,
+      "completedIn": 300,
+      "inProgress": false,
+      "state": "complete"
     },
     {
-      "id": 2,
-      "postId": 2,
-      "body": "This is another comment, on the second post."
+      "id": "gv2",
+      "pawsmonautId": "user456",
+      "user_age": 17,
+      "user_whyNew": "Just curious about the server.",
+      "user_whyTFP": "No particular reason.",
+      "user_joinMethod": "Discord discovery.",
+      "user_isFurry": false,
+      "user_fursona": null,
+      "user_whatFurry": null,
+      "user_hobbies": "Reading, coding",
+      "ticket_webhookURL": null,
+      "ticket_channelId": "channelabc",
+      "remindAt": 1678890000000,
+      "createdAt": "2024-04-20T16:41:56.000Z",
+      "handler": "staffMember2",
+      "firstResponseIn": 120,
+      "completedIn": 600,
+      "inProgress": false,
+      "state": "complete"
     }
   ],
-  "profile": {
-    "id": 1,
-    "name": "Mock User",
-    "email": "mock.user@example.com"
-  }
+  "ageVerifications": [
+    {
+      "id": "av1",
+      "pawsmonautId": "user123",
+      "user_suppliedAge": 25,
+      "verified": true
+    },
+    {
+      "id": "av2",
+      "pawsmonautId": "user456",
+      "user_suppliedAge": 17,
+      "verified": false
+    }
+  ],
+  "modmails": [
+    {
+      "id": "mm1",
+      "pawsmonautId": "user789",
+      "openingMessage": "Hello, I have a question about...",
+      "closingRemarks": "Thanks for the help!",
+      "ticket_channelId": "modmail-channel1",
+      "ticket_webhookURL": null,
+      "ticket_option": "General Question",
+      "ticket_open": false,
+      "ticket_data": null,
+      "ticket_openLogMessage": "Modmail ticket opened by user789",
+      "rating": 5,
+      "firstResponse": 30,
+      "completedIn": 180,
+      "createdAt": "2024-04-20T16:41:56.000Z",
+      "updatedAt": "2024-04-20T16:41:56.000Z"
+    },
+    {
+      "id": "mm2",
+      "pawsmonautId": "userabc",
+      "openingMessage": "Reporting a user for...",
+      "closingRemarks": "Issue resolved.",
+      "ticket_channelId": "modmail-channel2",
+      "ticket_webhookURL": null,
+      "ticket_option": "Report",
+      "ticket_open": false,
+      "ticket_data": null,
+      "ticket_openLogMessage": "Modmail ticket opened by userabc",
+      "rating": 4,
+      "firstResponse": 45,
+      "completedIn": 240,
+      "createdAt": "2024-04-20T16:41:56.000Z",
+      "updatedAt": "2024-04-20T16:41:56.000Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg1",
+      "pawsmonautId": "user123",
+      "channelId": "channel123",
+      "content": "Hello!",
+      "previousContents": [],
+      "embeds": [],
+      "components": [],
+      "attachments": [],
+      "stickers": [],
+      "reactions": [],
+      "refrences": null,
+      "location": "guild",
+      "pinned": false,
+      "threadId": null,
+      "createdAt": "2024-04-20T16:41:56.000Z",
+      "updatedAt": null
+    },
+    {
+      "id": "msg2",
+      "pawsmonautId": "user456",
+      "channelId": "channel456",
+      "content": "How are you?",
+      "previousContents": [],
+      "embeds": [],
+      "components": [],
+      "attachments": [],
+      "stickers": [],
+      "reactions": [],
+      "refrences": null,
+      "location": "dm",
+      "pinned": false,
+      "threadId": null,
+      "createdAt": "2024-04-20T16:41:56.000Z",
+      "updatedAt": null
+    }
+  ],
+  "cases": [
+    {
+      "id": "case1",
+      "pawsmonautId": "user123",
+      "staffId": "staff1",
+      "type": "Warning",
+      "reason": "Spamming",
+      "state": "active",
+      "data": null,
+      "evidence": [],
+      "deliveredNotice": true,
+      "createdAt": "2024-04-20T16:41:56.000Z",
+      "updatedAt": "2024-04-20T16:41:56.000Z",
+      "linkedModmail": "mm1",
+      "linkedWatchlist": null
+    },
+    {
+      "id": "case2",
+      "pawsmonautId": "user456",
+      "staffId": "staff2",
+      "type": "Ban",
+      "reason": "Harassment",
+      "state": "closed",
+      "data": null,
+      "evidence": [],
+      "deliveredNotice": true,
+      "createdAt": "2024-04-20T16:41:56.000Z",
+      "updatedAt": "2024-04-20T16:41:56.000Z",
+      "linkedModmail": "mm2",
+      "linkedWatchlist": null
+    }
+  ]
 }
